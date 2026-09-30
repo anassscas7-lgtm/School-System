@@ -1,0 +1,335 @@
+/* =========================================
+   teacherdashboard.css
+   Admin - Teachers Directory View
+   ========================================= */
+
+.td-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.td-header-left h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 2px 0;
+  letter-spacing: -0.5px;
+}
+
+.td-header-left p {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+}
+
+.td-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.td-btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.td-btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.td-btn-secondary {
+  background-color: #ffffff;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.td-btn-secondary:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.td-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #dbeafe;
+  color: #1e40af;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Stats Row */
+.td-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.td-stat-card {
+  background-color: #f8fafc;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+}
+
+.td-stat-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.td-stat-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.td-stat-sub {
+  font-size: 11px;
+  font-weight: 600;
+}
+.td-stat-sub.neutral { color: #64748b; }
+.td-stat-sub.red { color: #dc2626; }
+.att-stat-sub.green { color: #16a34a; }
+.td-stat-sub.blue { color: #2563eb; }
+
+/* Search Row */
+.td-controls-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.td-search-box {
+  flex-grow: 1;
+  position: relative;
+}
+
+.td-search-box svg {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: #94a3b8;
+}
+
+.td-search-box input {
+  width: 100%;
+  padding: 10px 16px 10px 38px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+  font-size: 13px;
+  color: #334155;
+  transition: all 0.2s ease;
+}
+
+.td-search-box input:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: #2d6cdf;
+  box-shadow: 0 0 0 3px rgba(45, 108, 223, 0.1);
+}
+
+.td-filter-pills {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.td-filter-pill {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.td-filter-pill:hover {
+  border-color: #cbd5e1;
+  color: #334155;
+}
+
+.td-filter-pill.active {
+  background-color: #eff6ff;
+  color: #2563eb;
+  border-color: #bfdbfe;
+}
+
+/* Data Table Card */
+.td-table-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 0; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.01);
+  overflow: hidden;
+}
+
+.td-table-scroll {
+  overflow-y: auto;
+  flex-grow: 1;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+.td-table-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.td-table-scroll::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 10px;
+}
+
+.td-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 900px;
+}
+
+.td-table th {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  padding: 12px 20px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e2e8f0;
+  z-index: 10;
+}
+
+.td-table td {
+  padding: 12px 20px;
+  font-size: 13px;
+  color: #334155;
+  border-bottom: 1px solid #f1f5f9;
+  font-weight: 500;
+  vertical-align: middle;
+}
+
+.td-table tr:hover td {
+  background-color: #f8fafc;
+}
+
+/* Pills & Buttons */
+.td-pill {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+
+.td-pill.status-active { background-color: #dcfce7; color: #16a34a; }
+.td-pill.status-leave { background-color: #fef3c7; color: #d97706; }
+
+.td-view-btn {
+  padding: 6px 14px;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  border-radius: 16px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.td-view-btn:hover {
+  border-color: #94a3b8;
+  color: #0f172a;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Pagination Footer */
+.td-pagination-footer {
+  padding: 12px 20px;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+
+.td-page-info {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.td-page-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.td-page-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.td-page-btn:hover {
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+.td-page-btn.active {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}

@@ -1,0 +1,27 @@
+/* 
+/* App.css */
+
+/* 1. Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Full Screen & Background */
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: #f4f7fe; /* Matches your modern dashboard background */
+  overflow-x: hidden;
+}
+
+/* 3. Override Vite's Hidden Defaults */
+#root {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+  display: block !important;
+}

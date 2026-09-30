@@ -1,0 +1,92 @@
+/* =========================================
+   header.css
+   Command Bar / Action Header Styles
+   ========================================= */
+
+.action-header-bar {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.88);
+  padding: 8px 10px;
+  border: 1px solid rgba(203, 213, 225, 0.72);
+  border-radius: 10px;
+  gap: 4px;
+  margin-bottom: 16px; 
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+  min-height: 46px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-family: inherit;
+}
+
+.action-btn:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.action-btn svg {
+  width: 16px;
+  height: 16px;
+  color: #64748b;
+  transition: color 0.2s ease;
+}
+
+.action-btn:hover svg {
+  color: #2563eb; 
+}
+
+/* Delete button hover danger color */
+.action-btn.delete-btn:hover {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+.action-btn.delete-btn:hover svg {
+  color: #dc2626;
+}
+
+/* Patli Line (Divider) */
+.action-divider {
+  width: 1px;
+  height: 16px;
+  background-color: #e2e8f0;
+  margin: 0 4px;
+}
+
+@media (max-width: 640px) {
+  .action-header-bar {
+    overflow-x: auto;
+  }
+
+  .action-btn {
+    flex: 0 0 auto;
+  }
+}
+
+/* 👇 NAYI CLASSES EXPORT BUTTON KE LIYE 👇 */
+
+/* Yeh class button ko right side par push karegi */
+.right-align {
+  margin-left: auto;
+}
+
+/* Export button ka special green hover effect */
+.action-btn.export-btn:hover {
+  background-color: #f0fdf4;
+  color: #16a34a;
+}
+.action-btn.export-btn:hover svg {
+  color: #16a34a;
+}

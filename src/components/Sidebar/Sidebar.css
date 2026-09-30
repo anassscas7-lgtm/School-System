@@ -1,0 +1,226 @@
+/* =========================================
+   Sidebar.css
+   EduSync — Universal Premium Sidebar
+   ========================================= */
+
+.app-sidebar {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(248, 250, 252, 0.98) 100%);
+  padding: 1.35rem 0 0; 
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(203, 213, 225, 0.72);
+  box-shadow: 18px 0 40px rgba(15, 23, 42, 0.04);
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+  font-family: var(--font-sans, 'Segoe UI', system-ui, -apple-system, sans-serif);
+}
+
+.app-sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Logo */
+.sidebar-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+  padding: 0 24px; 
+}
+
+.sidebar-logo-icon {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3px;
+  width: 34px;
+  height: 34px;
+  padding: 7px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2563eb, #0891b2);
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.24);
+}
+
+.sidebar-logo-icon .logo-dot {
+  width: 7px;
+  height: 7px;
+  background-color: rgba(255, 255, 255, 0.96);
+  border-radius: 2px;
+  display: block;
+}
+
+.sidebar-logo-text {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+/* Nav Groups */
+.sidebar-nav-scroll {
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.sidebar-nav-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-nav-group {
+  margin-bottom: 14px; 
+}
+
+.sidebar-nav-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #7c8a9c;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+  padding: 0 24px;
+}
+
+/* Perfect Nav Alignment */
+.sidebar-nav-item {
+  position: relative; 
+  display: flex;
+  align-items: center;
+  margin: 2px 12px;
+  padding: 9px 12px; 
+  font-size: 14px;
+  font-weight: 650;
+  color: #526275;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  user-select: none;
+  gap: 12px;
+  border-radius: 8px;
+}
+
+.sidebar-nav-icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #74849a;
+  transition: color 0.2s ease;
+}
+
+.sidebar-nav-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.sidebar-nav-item.active::before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  background: linear-gradient(180deg, #2563eb, #0891b2);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.sidebar-nav-item:hover {
+  color: #0f172a;
+  background-color: #f1f5f9;
+}
+.sidebar-nav-item:hover .sidebar-nav-icon {
+  color: #64748b;
+}
+.sidebar-nav-item.active {
+  color: #1d4ed8;
+  font-weight: 750;
+  background: linear-gradient(135deg, #eff6ff, #eefbff);
+  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.08);
+}
+.sidebar-nav-item.active .sidebar-nav-icon {
+  color: #1d4ed8;
+}
+
+/* Sidebar Bottom (Profile & Logout) */
+.sidebar-bottom {
+  margin-top: auto; 
+  padding: 16px 0;
+  border-top: 1px solid rgba(226, 232, 240, 0.9);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.sidebar-nav-item--logout {
+  color: #ef4444;
+  margin-bottom: 8px; 
+  gap: 12px;
+}
+.sidebar-nav-item--logout .sidebar-nav-icon {
+  color: #ef4444;
+  width: 36px;
+  justify-content: center;
+}
+.sidebar-nav-item--logout:hover {
+  color: #dc2626;
+  background-color: #fef2f2;
+}
+.sidebar-nav-item--logout:hover .sidebar-nav-icon {
+  color: #dc2626;
+}
+
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 24px 8px;
+  width: 100%;
+  user-select: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-profile:hover {
+  background-color: #f8fafc;
+}
+
+.sidebar-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #dbeafe;
+  color: #1e40af;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+/* Role specific avatar colors */
+.sidebar-avatar.admin { background-color: #dbeafe; color: #1e40af; }
+.sidebar-avatar.teacher { background-color: #dcfce7; color: #16a34a; }
+.sidebar-avatar.student { background-color: #ffe4e6; color: #e11d48; }
+
+.sidebar-profile-info {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; 
+}
+
+.sidebar-profile-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-profile-role {
+  font-size: 12px;
+  color: #64748b;
+  text-transform: capitalize;
+}
