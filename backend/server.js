@@ -1,10 +1,3 @@
-app.get('/api/health', (req, res) => {
-  res.status(200).json({
-    status: 'ok',
-    message: 'Backend is running'
-  });
-});
-
 // server.js
 const express = require('express');
 const cors = require('cors');
@@ -12,6 +5,7 @@ require('dotenv').config();
 const pool = require('./db');
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
@@ -20,6 +14,22 @@ app.use((req, res, next) => {
     req.url = `/api${req.url}`;
   }
   next();
+});
+
+// Basic backend endpoint
+app.get('/api', (req, res) => {
+  res.status(200).json({
+    status: 'ok',
+    message: 'EduSync backend is running'
+  });
+});
+
+// Health check
+app.get('/api/health', (req, res) => {
+  res.status(200).json({
+    status: 'ok',
+    message: 'Backend is running'
+  });
 });
 
 // ==========================================
