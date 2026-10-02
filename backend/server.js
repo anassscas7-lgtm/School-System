@@ -1,3 +1,10 @@
+app.get('/api/health', (req, res) => {
+  res.status(200).json({
+    status: 'ok',
+    message: 'Backend is running'
+  });
+});
+
 // server.js
 const express = require('express');
 const cors = require('cors');
